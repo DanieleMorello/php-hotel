@@ -42,11 +42,7 @@ $hotels = [
 
 // var_dump($hotels);
 
-foreach ($hotels as $hotelClass) {
-  foreach ($hotelClass as $hotel) {
-    echo $hotel;
-  }
-}
+
 
 ?>
 
@@ -64,6 +60,28 @@ foreach ($hotels as $hotelClass) {
 
 <body>
 
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Descrizione</th>
+        <th>Parcheggio</th>
+        <th>Punteggio</th>
+        <th>Distanza dal centro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($hotels as $hotel) : ?>
+      <tr>
+        <td><?php echo $hotel['name']; ?></td>
+        <td><?php echo $hotel['description']; ?></td>
+        <td><?php echo $hotel['parking'] ? 'Si' : 'No'; ?></td>
+        <td><?php echo $hotel['vote']; ?></td>
+        <td><?php echo $hotel['distance_to_center']; ?> km</td>
+      </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
 </body>
 
 </html>
