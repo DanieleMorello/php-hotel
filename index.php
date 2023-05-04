@@ -42,8 +42,6 @@ $hotels = [
 
 // var_dump($hotels);
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +58,7 @@ $hotels = [
 
 <body>
 
-  <table>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>Nome</th>
